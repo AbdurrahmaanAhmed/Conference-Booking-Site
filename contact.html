@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon23</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Added this style block for improved visibility toggling */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Section -->
+    <div class="background">
+        <!-- Navbar Section -->
+        <div class="navbar">
+            <!-- Icon and Logo -->
+            <div class="icon">
+                <a href="index.html">
+                    <h2 class="logo">TechCon 2023</h2>
+                </a>
+            </div>
+
+            <!-- Menu Navigation -->
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="contents">
+        <!-- Contact Information Heading -->
+        <h1>Contact Information</h1>
+
+        <!-- Email Information -->
+        <p>Email: <a href="mailto:aa1437@student.le.ac.uk">aa1437@student.le.ac.uk</a></p>
+
+        <!-- Phone Information -->
+        <p>Phone: +447312083604</p>
+
+        <!-- Social Media Links -->
+        <p>Follow me on social media:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/tech_con_2023/" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/your_twitter_handle" target="_blank">Twitter</a></li>
+        </ul>
+
+        <!-- Button to Start an Email -->
+        <button onclick="startEmail()">Contact Me Here</button>
+    </div>
+
+    <!-- JavaScript Section -->
+    <!-- code for javascript has been taken from : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href-->
+    <script>
+        // JavaScript function to start an email
+        function startEmail() {
+            window.location.href = 'mailto:aa1437@student.le.ac.uk';
+        }
+    </script>
+</body>
+</html>

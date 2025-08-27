@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title and link to stylesheet -->
+    <title>TechCon23 - Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background container with navigation bar -->
+    <div class="background">
+        <div class="navbar">
+            <!-- Icon and Logo -->
+            <div class="icon">
+                <a href="index.html">
+                    <h2 class="logo">TechCon 2023</h2>
+                </a>
+            </div>
+            <!-- Menu Navigation -->
+            <div class="menu">
+                <ul>
+                    <!-- Navigation Links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Schedule container with filter buttons and table -->
+    <div class="schedule-container">
+        <h1 class="Header">Schedule</h1>
+        <!-- Filter buttons for different days -->
+        <div class="filter-buttons">
+            <button onclick="filterSchedule('day1')">Day 1 (15th)</button>
+            <button onclick="filterSchedule('day2')">Day 2 (16th)</button>
+            <button onclick="filterSchedule('day3')">Day 3 (17th)</button>
+            <button onclick="filterSchedule('all')">Show All</button>
+        </div>
+
+        <!-- Schedule table -->
+        <!-- code has been taken from https://www.w3schools.com/html/html_tables.asp-->
+        <table id="scheduleTable">
+            <tr>
+                <!-- Table headers -->
+                <th>Time</th>
+                <th>Day</th>
+                <th>Event</th>
+                <th>Speakers</th> <!-- Speakers column -->
+            </tr>
+            <!-- Schedule rows for each event -->
+            <tr class="day1">
+                <td>9:00 AM</td>
+                <td>Day 1</td>
+                <td>Opening Keynote - Tim Cook</td>
+                <td>Tim Cook</td>
+            </tr>
+            <tr class="day1">
+                <td>10:00 AM</td>
+                <td>Day 1</td>
+                <td>Tech Trends Panel Discussion</td>
+                <td>Elon Musk (CEO of Tesla and SpaceX) <br> Sundar Pichai (CEO of Alphabet Inc.) <br> Sheryl Sandberg (COO of Facebook) </td>
+            </tr>
+            <tr class="day1">
+                <td>11:00 AM</td>
+                <td>Day 1</td>
+                <td>Developer's Workshop</td>
+                <td>Linus Torvalds (Creator of Linux kernel)</td>
+            </tr>
+            <tr class="day2">
+                <td>10:30 AM</td>
+                <td>Day 2</td>
+                <td>Fireside Chat with Industry Leaders</td>
+                <td>Mark Zuckerberg (CEO of Facebook) <br>
+                    Jeff Bezos (Founder of Amazon and Blue Origin)</td>
+            </tr>
+            <tr class="day2">
+                <td>1:30 PM</td>
+                <td>Day 2</td>
+                <td>AI and Robotics Showcase</td>
+                <td>Sundar Pichai (CEO of Alphabet Inc.) <br>
+                    AI and Robotics Experts</td>
+            </tr>
+            <tr class="day3">
+                <td>2:00 PM</td>
+                <td>Day 3</td>
+                <td>Closing Ceremony and Networking Reception</td>
+                <td>Closing Remarks by Tim Cook (CEO of Apple Inc.)</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- JavaScript function to filter the schedule table -->
+    <!-- code used from : https://www.youtube.com/watch?v=nC3_QqYOfxs-->
+    <script>
+        /*
+         * Filter the schedule table based on the selected day.
+         * The selected day to filter by ('day1', 'day2', 'day3', or 'all').*/
+
+        function filterSchedule(day) {
+            var rows = document.getElementById("scheduleTable").getElementsByTagName("tr");
+            for (var i = 1; i < rows.length; i++) {
+                var row = rows[i];
+                if (day === "all" || row.classList.contains(day)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon23</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Inline style for improved visibility toggling -->
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar and background -->
+    <div class="background">
+        <div class="navbar">
+            <div class="icon">
+                <a href="index.html">
+                    <h2 class="logo">TechCon 2023</h2>
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <!-- Navigation Links -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form Container -->
+    <div class="container">
+        <!-- Registration Form -->
+        <form id="registrationForm" action="action_page.php" onsubmit="return validateForm();">
+            <h1>Register</h1>
+            <p>Please fill in this form to register.</p>
+            <hr>
+
+            <!-- Full Name Input -->
+            <label for="fullName"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter full name" id="fullName" name="fullName" required>
+
+            <!-- Email Input -->
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+            <!-- Phone Number Input -->
+            <label for="phoneNumber"><b>Phone Number</b></label>
+            <input type="tel" placeholder="Enter phone number" id="phoneNumber" name="phoneNumber" pattern="[0-9()+\-]*" required>
+            <small>Enter a 10-digit phone number.</small>
+
+            
+
+            <!-- Register Button -->
+            <button type="submit" class="registerbtn">Register</button>
+        </form>
+
+        <!-- Thanks Message Container -->
+        <div id="thanksMessage" class="hidden">
+            <h2>Thanks for Registering!</h2>
+            <p>We appreciate your registration. We look forward to seeing you at the event.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle form submission and validation -->
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (!validatePhoneNumber(phoneNumber)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateEmail(email) {
+            // You can add more sophisticated email validation if needed
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePhoneNumber(phoneNumber) {
+            // Simple check for a 10-digit phone number
+            var phoneRegex = /^\d{10}$/;
+            return phoneRegex.test(phoneNumber);
+        }
+
+        function submitForm() {
+            /* Hide the registration form */
+            document.getElementById("registrationForm").style.display = "none";
+
+            /* Display the thanks message */
+            document.getElementById("thanksMessage").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
+

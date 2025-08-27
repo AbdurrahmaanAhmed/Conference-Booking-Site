@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon23 - Speakers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* This style has been added for improved visibility toggling */
+        .hidden {
+            display: none;
+        }
+
+        /* Style for the "Show More" button */
+        .show-more-btn {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main content container -->
+    <div class="background">
+        <div class="back">
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <div class="icon">
+                    <a href="index.html">
+                        <h2 class="logo">TechCon 2023</h2>
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <!-- Navigation Links -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speakers container -->
+    <div class="speakers-container">
+        <!-- Speaker: Elon Musk -->
+        <div class="speaker">
+            <img src="elon-musk.jpg" alt="Elon Musk">
+            <h3>Elon Musk</h3>
+            <p class="hidden">
+                Elon Musk is a business magnate, industrial designer, and engineer. He is the founder,
+                CEO, and lead designer of SpaceX; early investor, CEO, and product architect of Tesla, Inc.;
+                founder of The Boring Company; co-founder of Neuralink; and co-founder and initial co-chairman
+                of OpenAI.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+        <!-- Speaker: Tim Cook -->
+        <div class="speaker">
+            <img src="Tim_Cook_.jpg" alt="Tim Cook">
+            <h3>Tim Cook</h3>
+            <p class="hidden">
+                Tim Cook is the chief executive officer of Apple Inc. He joined Apple in 1998 as senior vice
+                president for worldwide operations and then served as the executive vice president for worldwide
+                sales and operations. Cook succeeded Steve Jobs as Apple's CEO in August 2011.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+        <!-- Speaker: Linus Torvalds -->
+        <div class="speaker">
+            <img src="LinusTorvalds_2016-embed.jpg" alt="Linus Torvalds">
+            <h3>Linus Torvalds</h3>
+            <p class="hidden">
+                Linus Torvalds is a Finnish-American software engineer who is the creator, and historically,
+                the principal developer of the Linux kernel, used by Linux distributions and other operating systems
+                such as Android.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+        <!-- Speaker: Mark Zuckerberg -->
+        <div class="speaker">
+            <img src="download.webp" alt="Mark Zuckerberg">
+            <h3>Mark Zuckerberg</h3>
+            <p class="hidden">
+                Mark Zuckerberg is an American computer programmer and Internet entrepreneur. He is known for co-founding
+                Facebook and serves as its chairman, chief executive officer, and controlling shareholder.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+        <!-- Speaker: Jeff Bezos -->
+        <div class="speaker">
+            <img src="jeffff.jpg" alt="Jeff Bezos">
+            <h3>Jeff Bezos</h3>
+            <p class="hidden">
+                Jeff Bezos is an American entrepreneur, media proprietor, investor, and commercial astronaut. He is the
+                founder, executive chairman, and former president and CEO of Amazon.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+        <!-- Speaker: Sheryl Sandberg -->
+        <div class="speaker">
+            <img src="sheryl sandberg.webp" alt="Sheryl Sandberg">
+            <h3>Sheryl Sandberg</h3>
+            <p class="hidden">
+                Sheryl Sandberg is an American business executive, billionaire, and author. She is the chief operating officer
+                (COO) of Meta Platforms, the parent company of Facebook.
+            </p>
+            <button class="show-more-btn">Show More</button>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for toggling visibility of speaker information -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Grab all speaker elements
+            var speakerElements = document.querySelectorAll('.speaker');
+
+            // Attach click event listener to each speaker element
+            speakerElements.forEach(function (speaker) {
+                // Add click event listener to toggle visibility
+                var infoParagraph = speaker.querySelector('p');
+                var showMoreBtn = speaker.querySelector('.show-more-btn');
+
+                showMoreBtn.addEventListener('click', function () {
+                    // Toggle the 'hidden' class to show/hide the additional info about the speakers
+                    infoParagraph.classList.toggle('hidden');
+
+                    // button text is changed 
+                    var buttonText = infoParagraph.classList.contains('hidden') ? 'Show More' : 'Show Less';
+                    showMoreBtn.textContent = buttonText;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+

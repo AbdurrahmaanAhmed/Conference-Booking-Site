@@ -1,0 +1,420 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the base font for the entire document */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey; /* Set the background color to grey */
+    color: orange; /* Set the text color to a dark shade of blue that complements orange */
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Styling for the background section */
+.background {
+    width: 100%;
+    background-color: grey; /* Set the background color to orange */
+    color: orange; /* Set the text color to orange*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: space;
+    height: 100vh;
+}
+
+/* Styling for the navigation bar */
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.icon {
+    width: 30%;
+    height: auto;
+}
+
+/* Styling for the logo */
+.logo {
+    color: orange;
+    font-size: 1.5em;
+}
+
+/* Styling for the menu */
+.menu {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+ul li {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    border: solid transparent;
+}
+
+ul li a:hover {
+    color: #ff7200;
+}
+
+/* Styling for the main content section */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    color: orange;
+    margin-top: -35%;
+}
+
+/* Styling for the main content heading */
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Styling for the main content paragraph */
+.content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling for the call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: orange;
+    color: #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for the call-to-action button */
+.cta-button:hover {
+    background-color: #ff8c00;
+}
+
+/* Styling for the container */
+.container {
+    padding: 4%;
+    margin-top: -40%; /* Adjust the negative margin to move it higher up */
+    background-color: rgba(255, 255, 255, 0.25); /* Adjust the alpha value for transparency */
+    border-radius: 10px; /* Set border-radius for rounded corners */
+}
+
+/* Styling for text, tel, and email input fields 
+References for websites which aided me in this area 
+https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+*/
+input[type=text], input[type=tel], input[type=email], input[type="text"]:focus,
+input[type="tel"]:focus, input[type="email"]:focus {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Remove focus outline for text, tel, and email input fields */
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus {
+    border: 2px solid #ff7200;
+    outline: none;
+}
+
+
+/* Styling for the horizontal rule */
+hr {
+    border: 1px solid black;
+    margin-bottom: 2%;
+}
+
+/* Styling for the submit/register button */
+.registerbtn {
+    background-color: orange;
+    color: black;
+    padding: 4% 5%;
+    margin: 2% 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+/* Hover effect for the submit/register button */
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Styling for links */
+a {
+    color: orange;
+}
+
+/* Styling for the thanksMessage */
+#thanksMessage {
+    display: none;
+    text-align: center;
+    padding: 4%;
+    margin-top: 2%;
+    background-color: rgba(255, 165, 0, 0.6);
+    color: black(233, 25, 25);
+    border-radius: 10px;
+}
+
+/* Styling for the schedule container */
+.schedule-container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -35%;
+    padding: 4%;
+    color: #000000;
+}
+
+/* Styling for filter buttons */
+.filter-buttons {
+    margin-bottom: 4%;
+}
+
+/* Styling for each filter button */
+.filter-buttons button {
+    margin-right: 4%;
+    padding: 2% 2%;
+    font-size: 2vw;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 10px;
+    color: #000000;
+}
+
+/* Styling for the schedule table */
+table {
+    width: 100%;
+    margin-top: 4%;
+    border-radius: 10px;
+}
+
+/* Styling for table headers and cells */
+th, td {
+    border: 0px solid orange;
+    padding: 2%;
+    text-align: left;
+    border-radius: 10px;
+}
+
+/* Styling for table headers */
+th {
+    background-color: rgba(255, 165, 0, 0.9);
+    border-radius: 10px;
+}
+
+/* Styling for day-specific background colors */
+.day1,
+.day2,
+.day3 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Styling for the header */
+.Header {
+    background-color: orange;
+    color: black;
+    padding: 4%;
+    text-align: center;
+    font-size: 3vw;
+    border-radius: 10px;
+    margin-top: -8%;
+}
+
+/* Styling for the speakers container */
+.speakers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4%;
+    margin-top: -45%;
+}
+
+/* Styling for individual speakers */
+.speaker {
+    width: 30%;
+    margin: 2%;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for speaker images
+images used are available to the public */
+.speaker img {
+    width: 70%;
+    border-radius: 50%;
+    margin-bottom: 4%;
+}
+
+/* Styling for speaker names */
+.speaker h3 {
+    font-size: 4vw;
+    margin-bottom: 2%;
+    color: orange;
+}
+
+/* Styling for speaker descriptions */
+.speaker p {
+    font-size: 2vw;
+    line-height: 1.6;
+    color: aliceblue;
+}
+
+/* Styling for "Show More" buttons */
+.show-more-btn {
+    background-color: #ff7200;
+    color: black;
+    border: none;
+    padding: 2% 4%;
+    font-size: 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for "Show More" buttons */
+.show-more-btn:hover {
+    background-color: orange;
+}
+
+/* Contact Information Styling */
+.contents {
+    text-align: center;
+    padding: 4%;
+    color: aliceblue;
+    margin-top: -45%;
+}
+
+/* Styling for the heading */
+h1 {
+    font-size: 3vw;
+    margin-bottom: 4%;
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 2vw;
+    margin-bottom: 2%;
+}
+
+/* Styling for buttons */
+button {
+    padding: 2% 4%;
+    font-size: 2vw;
+    background-color: #ff7200;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for buttons on hover */
+button:hover {
+    background-color: #ff8c00;
+}
+
+/* Media Query for responsiveness 
+References which helped me write the code for this section:
+https://www.w3schools.com/css/
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction
+https://stackoverflow.com/questions/38040539/html-make-website-fit-other-devices-and-screens*/
+@media only screen and (max-width: 768px) {
+    /* Update styles for smaller screens here */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .logo {
+        margin-top: 30%;
+        font-size: 1.2em;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        margin-top: 10px;
+    }
+
+    ul li {
+        margin-top: 5px;
+    }
+
+    .background {
+        margin-top: -10%; /* Adjust the negative margin to move it higher up */
+    }
+
+    .container,
+    .speaker {
+        width: 90%;
+        margin: 0 auto; /* Center the container */
+    }
+
+    .cta-button,
+    .registerbtn,
+    .show-more-btn,
+    button {
+        font-size: 2vw;
+        padding: 3% 5%;
+    }
+
+    .Header,
+    h1 {
+        font-size: 3vw;
+    }
+
+    .speaker img {
+        width: 70%;
+    }
+
+    /* Adjust the margin-top for the contact page info */
+    .contents {
+        margin-top: -60%; /* You can adjust this value as needed */
+    }
+}
+
